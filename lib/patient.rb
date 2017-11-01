@@ -1,22 +1,22 @@
-class Genre
+class Patient
   attr_accessor :name
 
   def initialize(name)
     @name = name
-    @songs = []
+    @appointments = []
   end
 
-  def songs
-    @songs
+  def appointments
+    @appointments
   end
 
-  def add_song(song)
-    @songs << song
+  def add_appointment(appointment)
+    @appointments << appointment
   end
 
-  def artists
-    @songs.collect do |song|
-      song.artist
+  def doctors
+    @appointments.collect do |appointment|
+      appointment.doctor
     end
   end
 end
